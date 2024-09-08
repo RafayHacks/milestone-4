@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Developer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-header">Resume Developer By Rafay</h1>
+
+        <div class="section-container">
+            <div class="section-header" onclick="toggleSection('personal-info')">Personal Information</div>
+            <div id="personal-info" class="section-content">
+                <div class="input-field">
+                    <input type="file" id="image-upload" accept="image/*" />
+                    <img id="profile-image" src="./images.png" alt="Profile Image" style="max-width: 100px; max-height: 100px;" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="full-name" placeholder="Type Full Name here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="phone-number" placeholder="Type Phone Number here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="email" placeholder="Type Email here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="city" placeholder="Type City here" class="input input-bordered input-warning w-full" />
+                </div>
+            </div>
+
+            <div class="section-header" onclick="toggleSection('education')">Education</div>
+            <div id="education" class="section-content">
+                <div class="input-field">
+                    <input type="text" id="degree" placeholder="Type Degree or Certification here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="institution" placeholder="Type Institution here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="year" placeholder="Type Year of Completion here" class="input input-bordered input-warning w-full" />
+                </div>
+            </div>
+
+            <div class="section-header" onclick="toggleSection('experience')">Experience</div>
+            <div id="experience" class="section-content">
+                <div class="input-field">
+                    <input type="text" id="job-title" placeholder="Type Job Title here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="company-name" placeholder="Type Company Name here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="duration" placeholder="Type Duration here" class="input input-bordered input-warning w-full" />
+                </div>
+            </div>
+
+            <div class="section-header" onclick="toggleSection('skills')">Skills</div>
+            <div id="skills" class="section-content">
+                <div class="input-field">
+                    <input type="text" id="skill1" placeholder="Type Skill here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="skill2" placeholder="Type Skill here" class="input input-bordered input-warning w-full" />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="skill3" placeholder="Type Skill here" class="input input-bordered input-warning w-full" />
+                </div>
+        
+       
+    </div>
+ <!-- PDF Viewer -->
+     
+ <h1 class="text-lg mb-4">If you need to make any edits to your PDF, enter the information in the fields at the top and then click the "Submit Resume" button at the bottom.</h1>
+
+ <button id="generate-pdf" class="btn btn-primary mb-4">Submit Resume</button>
+
+ <div id="pdf-viewer" class="mb-4"></div>
+
+ <!-- Container for PDF buttons -->
+ <div id="pdf-buttons" class="flex justify-center gap-4 mt-4"></div>
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./app.js"></script>
+</body>
+</html>
